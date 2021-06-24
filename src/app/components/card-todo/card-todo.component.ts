@@ -38,7 +38,11 @@ export class CardTodoComponent implements OnInit {
   prevStep() {
     this.step--;
   }
-  onSubmit(){}
+  onSubmit() { }
+  
+  btnRemove(ev) {
+    alert(ev)
+  }
 }
 @NgModule({
   declarations: [CardTodoComponent],

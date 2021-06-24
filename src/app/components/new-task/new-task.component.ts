@@ -4,6 +4,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatFormFieldModule} from '@angular/material/form-field';
+import { BaseButtonModule } from '../base-button/base-button.component';
 
 @Component({
   selector: 'app-new-task',
@@ -32,7 +33,7 @@ export class NewTaskComponent {
 }
 @NgModule({
   declarations: [NewTaskComponent ],
-  imports: [CommonModule,FormsModule,ReactiveFormsModule,MatDatepickerModule,MatFormFieldModule,MatNativeDateModule,  ],
+  imports: [CommonModule,FormsModule,ReactiveFormsModule,MatDatepickerModule,MatFormFieldModule,MatNativeDateModule, BaseButtonModule ],
   exports: [NewTaskComponent ]
 })
 export class NewTaskModule{}
