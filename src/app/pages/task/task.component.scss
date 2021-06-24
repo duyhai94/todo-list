@@ -1,0 +1,24 @@
+
+.task{
+  width: 1140px;
+  height: 900px;
+  margin: auto;
+  padding-top: 100px;
+  display: grid;
+  grid-template-areas: "a b b b";
+  .new-task{
+    grid-area: a;
+    border: 1px solid blue;
+
+  }
+  .todo-list  {
+    grid-area: b;
+    border: 1px solid red;
+
+  }
+}
+.header{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}

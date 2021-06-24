@@ -1,0 +1,28 @@
+.new-task{
+  width: 100%;
+  height: 100%;
+  // padding: 20px;
+  .form{
+    display: flex;
+    flex-direction: column;
+
+    .form-col{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      // display: grid;
+      // grid-template-columns: auto auto;
+      // column-gap: 16px;
+
+    }
+    .form-group{
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      width: 100%;
+
+    }
+
+  }
+
+}

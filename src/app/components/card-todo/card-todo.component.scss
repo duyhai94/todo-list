@@ -1,0 +1,59 @@
+.card{
+  border: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+    .mat{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .mat-header{
+        display: flex;
+        align-items: center;
+        .tichbox{
+          width: 20px;
+          height: 20px;
+          margin: 0px 10px;
+
+        }
+      }
+    .mat-button{
+      display: flex;
+    }
+
+    }
+    button {
+      width: 100px;
+      height: 34px;
+      margin: 0px 10px ;
+    }
+    mat-accordion{
+      margin: 16px;
+    }
+    mat-expansion-panel  {
+      margin-bottom: 10px;
+    }
+
+
+
+    .footer{
+      position: absolute;
+      z-index: 101;
+      left: 0px;
+      bottom: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e0e0e0;
+      padding: 0px 20px;
+      height: 100px;
+      .box-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+}
+
+
