@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, NgModule, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
   selector: 'app-new-task',
@@ -8,14 +11,16 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   styleUrls: ['./new-task.component.scss']
 })
 export class NewTaskComponent {
-  @Output() callback =  new EventEmitter;
-  @Input() btnName;
+
   form = new FormGroup({
     nameTask : new FormControl(''),
     description : new FormControl(''),
     date: new FormControl(''),
     piority: new FormControl
   })
+
+  
+
   constructor() { }
 
   onSubmit(){
@@ -27,7 +32,7 @@ export class NewTaskComponent {
 }
 @NgModule({
   declarations: [NewTaskComponent ],
-  imports: [CommonModule,FormsModule,ReactiveFormsModule],
+  imports: [CommonModule,FormsModule,ReactiveFormsModule,MatDatepickerModule,MatFormFieldModule,MatNativeDateModule,  ],
   exports: [NewTaskComponent ]
 })
 export class NewTaskModule{}

@@ -1,33 +1,28 @@
 <div class="new-task">
-      <form class="form" [formGroup]="form" (ngSubmit)=onSubmit()>
-
+    <form class="form" [formGroup]="form" (ngSubmit)=onSubmit()>
         <div class="form-group">
-          <input type="text" formControlName="nameTask" placeholder="Add new task ...">
+            <input type="text" class="input" formControlName="nameTask" placeholder="Add new task ...">
         </div>
-
-
         <div class="form-group">
-          <label for="description" class="text-label">Description</label>
-          <textarea formControlName="description"   name="description" id="description" cols="30" rows="10"></textarea>
+            <label for="description" class="text-label">Description</label>
+            <textarea formControlName="description" name="description" id="description" cols="30" rows="10"></textarea>
         </div>
-
-
-          <div class="form-col">
+        <div class="form-col">
             <div class="form-group">
-              <label for="date" class="text-label">Date</label>
-              <input type="text" formControlName="date"  name="date" id="date">
+                <label for="date" class="text-label">Date</label>
+                <input class="input" type="text" formControlName="date" name="date" id="date">
             </div>
-
             <div class="form-group">
-              <label for="piority" class="text-label">Piority</label>
-              <input type="text" formControlName="piority"  name="piority" id="piority">
+                <label for="piority" class="text-label">Piority</label>
+                <select class="input" id="piority" formControlName="piority"> 
+                  <option value="Low">Low</option> 
+                  <option value="Normal" [selected]="'Normal'"> Normal</option> 
+                  <option value="High"> High</option> 
+                </select>
             </div>
-          </div>
-          <div class="form-group">
-
-            <button type="submit" class="btn-success"  (click)="callback.emit(onSubmit())">{{btnName}}</button>
-
-          </div>
-
-      </form>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-success">Add</button>
+        </div>
+    </form>
 </div>
